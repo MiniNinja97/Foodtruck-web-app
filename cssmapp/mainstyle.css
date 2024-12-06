@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 16px;
+}
+:root{
+    --mainGreen:#489078;
+    --lightGray:#605858;
+    --darkGray:#353131;
+    --mainWhite:#e9e8e5;
+    --selectedGray:#353131;
+    --mainRed:#EB5757;
+}
+
+.loggan{
+    width: 39px;
+    height: 38px;
+    
+}

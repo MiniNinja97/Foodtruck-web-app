@@ -1,0 +1,73 @@
+.homescreen {
+    background-color: var(--mainGreen);
+    color: var(--mainWhite);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.loggan {
+    width: 5em;
+    height: 5em;
+
+    margin: 2rem;
+}
+
+.huvudtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titel {
+        font-size: 2rem;
+        margin-bottom: 0;
+        font-weight: bold;
+        
+    }
+    .undertitel {
+        margin-top: 0;
+        margin-bottom: 5em;
+    }
+
+    .menybutton {
+        background-color: var(--lightGray);
+        color: var(--mainWhite);
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1em;
+        border: 0px;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+
+.mellanrum {
+    flex-grow: 1;
+}
+
+.öppettider {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: var(--lightGray);
+    color: var(--mainWhite);
+
+    .öppettitel {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .mån-tors {
+        margin-top: 0;
+    }
+    
+}
