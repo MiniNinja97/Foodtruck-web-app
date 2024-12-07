@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./cssmapp/mainstyle.css" rel="stylesheet">
     <link href="./cssmapp/homescreen.css" rel="stylesheet">
+    <link href="./cssmapp/meny.css" rel="stylesheet">
 
 <title>Foodtruck</title>
 </head>
@@ -30,11 +31,11 @@
     </section>
 
     <section class="menysida">
-
-        <h1 class="menytitel">Meny</h1>
         <div class="icon">
             <img src="img/cart.svg" alt="kundkorg">
         </div>
+        <h1 class="menytitel">Meny</h1>
+        
         <div class="matval">
             <div class="menyval">
                 <h3 class="matnamn">Karlstad</h3>
@@ -45,15 +46,21 @@
         </div>
 
         <div class="dippval">
-            <h3 class="dipptitel">Dippsås</h3>
-            <h3 class="dipppris">19sek</h3>
+            <div class="dippcontainer">
+                <h3 class="dipptitel">Dippsås</h3>
+                <div class="mellanstreck"></div>
+                <h3 class="dipppris">19sek</h3>
+            </div>
             <button class="dippsås">Sweet Chili</button>
 
         </div>
 
         <div class="drickval">
-            <h3 class="drickitel">Dippsås</h3>
-            <h3 class="drickpris">19sek</h3>
+            <div class="drickcontainer">
+                <h3 class="drickitel">Dricka</h3>
+                <div class="mellanstreck"></div>
+                <h3 class="drickpris">19sek</h3>
+            </div>
             <button class="drickor">Fanta Orange</button>
 
         </div>

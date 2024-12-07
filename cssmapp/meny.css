@@ -1,0 +1,120 @@
+.menysida {
+    background-color: var(--mainGreen);
+    color: var(--mainWhite);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+.menytitel {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+.matval {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    background-color: var(--lightGray);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 1.5em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.menyval {
+    display: flex;
+    flex-direction: row;
+    
+}
+.mellanstreck {
+    border-bottom: dotted var(--mainWhite);
+    flex-grow: 1;
+    
+}
+
+.matnamn {
+    align-self: flex-start;
+}
+.matpris {
+    align-self: flex-end;
+}
+.innehåll {
+    font-size: 0.7rem;
+    margin-top: 0.5em;
+}
+
+
+
+}
+
+.icon {
+    background-color: var(--mainWhite);
+    display: flex;
+    align-self: flex-end;
+    padding: 0.5em;
+    margin: 1em;
+    
+    border-radius: 6px;
+}
+
+.dippval {
+    background-color: var(--lightGray);
+    
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+   
+
+    .dippcontainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1em;
+        
+    }
+
+    .dippsås {
+        background-color: var(--buttonGray);
+        color: var(--mainWhite);
+        border: 0;
+        padding: 0.5em;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+
+}
+
+
+.drickval {
+    background-color: var(--lightGray);
+    
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+   
+
+    .drickcontainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1em;
+        
+    }
+
+    .drickor {
+        background-color: var(--buttonGray);
+        color: var(--mainWhite);
+        border: 0;
+        padding: 0.5em;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+
+}
