@@ -1,0 +1,105 @@
+.kundkorg {
+    background-color: var(--mainWhite);
+    color: var(--darkGray);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.minaval {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+
+    .matnamn {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .matpris {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+.mellanstreck {
+    border-bottom: dotted var(--lightGray);
+    flex-grow: 1;
+    
+}
+.plus-minus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.plus {
+    /* font-size: ; */
+    background-color: var(--cartGrey);
+    border-radius: 100%;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+.minus {
+    background-color: var(--cartGrey);
+    border-radius: 100%;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.totalen {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    margin: 2em;
+    background-color: var(--cartGrey);
+    border-radius: 4px;
+
+    .total-titel{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .moms {
+        font-size: 0.8rem;
+    }
+
+   .slutpris {
+    font-size: 1.2rem;
+    font-weight: bold;
+   }
+
+
+
+}
+
+.betala {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 1.5rem;
+    background-color: var(--darkGray);
+    color: var(--mainWhite);
+    border: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3.2em;
+    padding-right: 3.2em;
+    margin-top: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+}
