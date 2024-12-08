@@ -1,0 +1,62 @@
+.etasida {
+    height: 100vh;
+    background-color: var(--lightGray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--mainWhite);
+    
+   .tillagas {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1em;
+    text-align: center;
+   }
+
+   .minuter {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   }
+
+   .ordernr {
+    margin-bottom: 1em;
+   }
+
+   .sekvittot {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid var(--mainWhite);
+    color: var(--mainWhite);
+    background-color: var(--lightGray);
+    border-radius: 4px;
+}
+
+    .nybeställning {
+        background-color: var(--darkGray);
+        color: var(--mainWhite);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border: 0;
+        border-radius: 4px;
+    }
+
+
+}
