@@ -1,0 +1,103 @@
+.kvittosidan {
+	background-color: var(--lightGray);
+	height: 100vh;
+	
+	
+}
+
+.kvitto {
+	background-color: var(--mainWhite);
+	color: var(--lightGray);
+	margin-left: 2em;
+	margin-right: 2em;
+	
+	align-items: center;
+	
+	
+}
+.kvittocontainer {
+	background-color: var(--mainWhite);
+	color: var(--lightGray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	
+	
+
+	.kvittologgan {
+		width: 5em;
+		height: 5em;
+	
+		margin: 2rem;
+	}
+
+
+
+
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+
+}
+p{
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+.valmatkvitto {
+	display: flex;
+    flex-direction: row;
+	align-items: center;
+	padding: 1em;
+	
+}
+.mellanstreckkvitto {
+    border-bottom: dotted var(--lightGray);
+    flex-grow: 1;
+    
+}
+
+.totalenkvitto {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    margin: 2em;
+    background-color: var(--cartGrey);
+    
+
+    .total-titel{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .moms {
+        font-size: 0.8rem;
+    }
+
+   .slutpris {
+    font-size: 1.2rem;
+    font-weight: bold;
+   }
+
+
+
+}
+.nybeställning {
+	background-color: var(--darkGray);
+	color: var(--mainWhite);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border: 0;
+	border-radius: 4px;
+}
