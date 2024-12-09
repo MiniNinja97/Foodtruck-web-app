@@ -43,3 +43,4 @@ const nybestButtonKvitto = document.querySelector(".kvittosidan .nybeställning"
 nybestButtonKvitto.addEventListener("click", () => showSection('.menysida'));
 
 
+
