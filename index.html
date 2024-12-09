@@ -12,127 +12,123 @@
     <link href="./cssmapp/eta.css" rel="stylesheet">
 	<link href="./cssmapp/kvitto.css" rel="stylesheet">
 	<script type="module" src="./JavaScript-mapp/hidefunktioner.js"></script>
-	<script type="module" src="./JavaScript-mapp/hämtaAPInyckel.js"></script>
+	<script type="module" src="./JavaScript-mapp/hämtaAPI.js"></script>
+	
 <title>Foodtruck</title>
 </head>
 <body>
-    <section class="homescreen">
-        <div class="logga1">
-            <img class="loggan" src="img/logo.svg" alt="Loggan till foodtruck">
-        </div>
-            <div class="huvudtext">
-            <h1 class="titel">YUM YUM GIM MI SUM</h1>
-            <h4 class="undertitel">Delicious Fried Vegetarian Wonton</h4>
-            <button class="menybutton">Meny</button>
-        </div>
-        <div class="mellanrum"></div>
-        <div class="öppettider">
-            <p class="öppettitel">Öppettider</p>
-            <p class="mån-tors">Mån-tors: 12:30 - 17:00</p>
-            <p class="mån-tors">Fre-lör: 12:00 - 19:00</p>
-            <p class="mån-tors">Söndag: Stängt</p>
-        </div>
-    </section>
-
-    <section class="menysida">
-        <div class="icon">
-            <img src="img/cart.svg" alt="kundkorg">
-        </div>
-        <h1 class="menytitel">Meny</h1>
-        
-        <div class="matval">
-            <div class="menyval">
-                <h3 class="matnamn">Karlstad</h3>
-                <div class="mellanstreck"></div>
-                <h3 class="matpris">9 sek</h3>
-            </div>
-            <p class="innehåll">kantarell, scharlottenlök, morot, bladpersilja</p>
-        </div>
-
-        <div class="dippval">
-            <div class="dippcontainer">
-                <h3 class="dipptitel">Dippsås</h3>
-                <div class="mellanstreck"></div>
-                <h3 class="dipppris">19sek</h3>
-            </div>
-            <button class="dippsås">Sweet Chili</button>
-
-        </div>
-
-        <div class="drickval">
-            <div class="drickcontainer">
-                <h3 class="drickitel">Dricka</h3>
-                <div class="mellanstreck"></div>
-                <h3 class="drickpris">19sek</h3>
-            </div>
-            <button class="drickor">Fanta Orange</button>
-
-        </div>
-
-    </section>
-
-    <section class="kundkorg">
-        <div class="icon">
-            <img src="img/cart.svg" alt="kundkorg">
-        </div>
-        <div class="minaval">
-            <h3 class="matnamn">Karlstad</h3>
-            <div class="mellanstreck"></div>
-            <h3 class="matpris">9 sek</h3>
-        </div>
-            <div class="plus-minus">
-            <p class="plus">+</p>
-            <p class="antal">3 stycken</p>
-            <p class="minus">-</p>
-        </div>
-        <div class="totalen">
-            <div class="text">
-                <p class="total-titel">Totalt</p>
-                <p class="moms">inkl 20% moms</p>
-            </div>
-            <div class="mellanrum"></div>
-            <div>
-                <p class="slutpris">120SEK</p>
-            </div>
-        </div>
-        <button class="betala">TAKE MY MONEY</button>
-</section>
-
-<section class="etasida">
-    <img src="img/boxtop.svg" alt="bild på takeawaybox">
-    <h1 class="tillagas">DINA WONTONS TILLAGAS!</h1>
-    <p class="minuter">ETA 5 MIN</p>
-    <p class="ordernr">#4kjwsdf2</p>
-    <button class="sekvittot">SE KVITTO</button>
-    <button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
-</section>
-
-<section class="kvittosidan">
-	<div class="kvitto">
-		<div class="kvittocontainer">
-			<img class="kvittologgan" src="img/logo.svg" alt="loggan för fodtruck">
-			<h2>KVITTO</h2>
-			<p>#4kjwsdf2</p>
+    <section class="homescreen ">
+		<div class="logga1">
+			<img class="loggan" src="img/logo.svg" alt="Loggan till foodtruck">
 		</div>
-		<div class="valmatkvitto">
-			<p>Karlstad</p>
-			<div class="mellanstreckkvitto"></div>
-			<p>27 sek</p>
+		<div class="huvudtext">
+			<h1 class="titel">YUM YUM GIM MI SUM</h1>
+			<h4 class="undertitel">Delicious Fried Vegetarian Wonton</h4>
+			<button class="menybutton">Meny</button>
 		</div>
-		<p class="mängd">3 stycken</p>
-		<div class="totalenkvitto">
+		<div class="mellanrum"></div>
+		<div class="öppettider">
+			<p class="öppettitel">Öppettider</p>
+			<p class="mån-tors">Mån-tors: 12:30 - 17:00</p>
+			<p class="mån-tors">Fre-lör: 12:00 - 19:00</p>
+			<p class="mån-tors">Söndag: Stängt</p>
+		</div>
+	</section>
+	
+	<section class="menysida ">
+		<div class="icon">
+			<img src="img/cart.svg" alt="kundkorg">
+		</div>
+		<h1 class="menytitel">Meny</h1>
+		<div class="matval">
+			<div class="menyval">
+				<h3 class="matnamn">Karlstad</h3>
+				<div class="mellanstreck"></div>
+				<h3 class="matpris">9 sek</h3>
+			</div>
+			<p class="innehåll">kantarell, scharlottenlök, morot, bladpersilja</p>
+		</div>
+		<div class="dippval">
+			<div class="dippcontainer">
+				<h3 class="dipptitel">Dippsås</h3>
+				<div class="mellanstreck"></div>
+				<h3 class="dipppris">19sek</h3>
+			</div>
+			<button class="dippsås">Sweet Chili</button>
+		</div>
+		<div class="drickval">
+			<div class="drickcontainer">
+				<h3 class="drickitel">Dricka</h3>
+				<div class="mellanstreck"></div>
+				<h3 class="drickpris">19sek</h3>
+			</div>
+			<button class="drickor">Fanta Orange</button>
+		</div>
+	</section>
+	
+	<section class="kundkorg ">
+		<div class="icon">
+			<img src="img/cart.svg" alt="kundkorg">
+		</div>
+		<div class="minaval">
+			<h3 class="matnamn">Karlstad</h3>
+			<div class="mellanstreck"></div>
+			<h3 class="matpris">9 sek</h3>
+		</div>
+		<div class="plus-minus">
+			<p class="plus">+</p>
+			<p class="antal">3 stycken</p>
+			<p class="minus">-</p>
+		</div>
+		<div class="totalen">
 			<div class="text">
 				<p class="total-titel">Totalt</p>
 				<p class="moms">inkl 20% moms</p>
 			</div>
 			<div class="mellanrum"></div>
-			<div class="slutpris">
-				<p>120SEK</p>
+			<div>
+				<p class="slutpris">120SEK</p>
 			</div>
 		</div>
-	</div>
-    <button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
-</section>
+		<button class="betala">TAKE MY MONEY</button>
+	</section>
+	
+	<section class="etasida ">
+		<img src="img/boxtop.svg" alt="bild på takeawaybox">
+		<h1 class="tillagas">DINA WONTONS TILLAGAS!</h1>
+		<p class="minuter">ETA 5 MIN</p>
+		<p class="ordernr">#4kjwsdf2</p>
+		<button class="sekvittot">SE KVITTO</button>
+		<button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
+	</section>
+	
+	<section class="kvittosidan ">
+		<div class="kvitto">
+			<div class="kvittocontainer">
+				<img class="kvittologgan" src="img/logo.svg" alt="loggan för foodtruck">
+				<h2>KVITTO</h2>
+				<p>#4kjwsdf2</p>
+			</div>
+			<div class="valmatkvitto">
+				<p>Karlstad</p>
+				<div class="mellanstreckkvitto"></div>
+				<p>27 sek</p>
+			</div>
+			<p class="mängd">3 stycken</p>
+			<div class="totalenkvitto">
+				<div class="text">
+					<p class="total-titel">Totalt</p>
+					<p class="moms">inkl 20% moms</p>
+				</div>
+				<div class="mellanrum"></div>
+				<div class="slutpris">
+					<p>120SEK</p>
+				</div>
+			</div>
+		</div>
+		<button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
+	</section>
+	
 
 
 </body>

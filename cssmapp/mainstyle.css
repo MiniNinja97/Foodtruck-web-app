@@ -21,9 +21,12 @@
     
 }
 
-/* .homescreen, .menysida, .kundkorg, .etasida, .kvittosidan {
-    display: none; 
-}
-.homescreen {
-    display: flex; 
-} */
+
+/* .hidden {
+	display: none;
+  }
+  
+  .visible {
+	display: flex; 
+  } */
+  
