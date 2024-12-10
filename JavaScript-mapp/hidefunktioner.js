@@ -25,8 +25,11 @@ const menyButton = document.querySelector('.menybutton');
 menyButton.addEventListener('click', () => showSection('.menysida'));
 
 
-const kundkorgIcon = document.querySelector('.menysida .icon');
-kundkorgIcon.addEventListener('click', () => showSection ('.kundkorg'));
+const menykundkorgIcon = document.querySelector('.menysida .icon');
+menykundkorgIcon.addEventListener('click', () => showSection ('.kundkorg'));
+
+const kundkorgIcon = document.querySelector('.kundkorg .icon');
+kundkorgIcon.addEventListener('click', () => showSection ('.menysida'));
 
 
 const betalaButton = document.querySelector('.betala');
