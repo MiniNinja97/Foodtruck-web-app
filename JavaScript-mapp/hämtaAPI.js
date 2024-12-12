@@ -22,6 +22,8 @@
 
 //nyckeln {key: 'yum-zaCmZA74PLKCrD8Y'}
 
+import { updateMenu } from './hämtamenyn.js';
+
 
 async function getApi(url) {
     try {
@@ -38,11 +40,17 @@ async function getApi(url) {
 
         const data = await response.json();
         console.log('API:', data);
+		return data;
     } catch (error) {
         console.error('Error fetching api key', error);
     }
 }
 
 
-getApi('https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu');
+getApi('https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/menu')
+.then(menuData => {
+	console.log('Hämtat menyn:', menuData);
+	updateMenu(menuData.items);
+});
+
 

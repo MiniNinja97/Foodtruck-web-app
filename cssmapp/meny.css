@@ -69,16 +69,17 @@
     margin-right: 1em;
     margin-bottom: 2em;
     border-radius: 8px;
+	
    
 
     .dippcontainer {
-        display: flex;
-        flex-direction: row;
+       
         margin-bottom: 1em;
         
     }
 
     .dippsås {
+		
         background-color: var(--buttonGray);
         color: var(--mainWhite);
         border: 0;
