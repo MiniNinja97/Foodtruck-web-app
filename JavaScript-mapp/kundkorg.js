@@ -1,15 +1,17 @@
 
+
 const kundkorgContainer = document.querySelector('.kundkorg .minaval-container');
 const totalPrisElement = document.querySelector('.kundkorg .slutpris');
+const reddott = document.querySelector('.reddott');
 let kundkorg = [];
 
 function uppdateraKundkorg() {
     kundkorgContainer.innerHTML = '';  
     let totalPris = 0;
-
-    // Kolla om kundkorgen är tom
+    let totalItems = 0;
+    
     if (kundkorg.length === 0) {
-        totalPrisElement.textContent = '0 SEK'; // Sätter totalen till 0 när kundkorgen är tom
+        totalPrisElement.textContent = '0 SEK'; 
         return;
     }
 
@@ -42,27 +44,29 @@ function uppdateraKundkorg() {
 
         const plusMinusContainer = document.createElement('div');
         plusMinusContainer.classList.add('plus-minus');
+
+		
         plusMinusContainer.appendChild(plus);
         plusMinusContainer.appendChild(antal);
         plusMinusContainer.appendChild(minus);
 
-        // Event listeners för plus och minus
+        
         plus.addEventListener('click', () => {
-            item.count += 1;  // Öka antal
-            uppdateraKundkorg(); // Uppdatera kundkorgen
+            item.count += 1;  
+            uppdateraKundkorg(); 
         });
 
         minus.addEventListener('click', () => {
             if (item.count > 1) {
-                item.count -= 1;  // Minska antal om större än 1
+                item.count -= 1;  
             } else {
-                // Ta bort item från kundkorgen om antal är 1 eller mindre
+                
                 kundkorg = kundkorg.filter(product => product !== item);
             }
-            uppdateraKundkorg(); // Uppdatera kundkorgen
+            uppdateraKundkorg(); 
         });
 
-        // Bygg upp produktens layout
+        
         produktDiv.appendChild(matnamn);
         produktDiv.appendChild(mellanstreck);
         produktDiv.appendChild(matpris);
@@ -71,24 +75,41 @@ function uppdateraKundkorg() {
         kundkorgContainer.appendChild(produktDiv);
 
         totalPris += item.price * item.count;
+        totalItems += item.count; 
+		
     });
+		 
+	reddott.innerText = totalItems 
+	if (totalItems === 0){
+		reddott.classList.add ('displaynone')
+	} else {
+		reddott.classList.remove ('displaynone')
+	}
+
+	
 
     totalPrisElement.textContent = `${totalPris} SEK`;
 }
 
-function läggTillIKundkorgen(name, price) {
-    const existingProduct = kundkorg.find(item => item.name === name);
+function läggTillIKundkorgen(id, name, price) {
+    
+    const existingProduct = kundkorg.find(item => item.id === id);
 
     if (existingProduct) {
+       
         existingProduct.count += 1;
     } else {
-        kundkorg.push({ name, price, count: 1 });
+        
+        kundkorg.push({ id, name, price, count: 1 });
     }
 
     uppdateraKundkorg();
 }
 
-export { läggTillIKundkorgen };
+
+
+
+export { kundkorg, läggTillIKundkorgen };
 
 
 

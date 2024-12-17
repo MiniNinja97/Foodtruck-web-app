@@ -1,13 +1,14 @@
 
-import { läggTillIKundkorgen } from './kundkorg.js';
+import { läggTillIKundkorgen } from './kundkorg.js';  
 
 export function updateMenu(items) {
     const matvalContainer = document.querySelector('.matval');
     const dippvalContainer = document.querySelector('.dippval');
     const drickvalContainer = document.querySelector('.drickval');
+	
 
     items.forEach(item => {
-        const { type, name, price } = item;
+        const { id, type, name, price } = item;  
 
         if (type === 'wonton') {
             const menyvalButton = document.createElement('button');
@@ -15,7 +16,7 @@ export function updateMenu(items) {
             menyvalButton.textContent = `${name} - ${price} SEK`;
 
             menyvalButton.addEventListener('click', () => {
-                läggTillIKundkorgen(name, price);
+                läggTillIKundkorgen(id, name, price);  
             });
 
             matvalContainer.appendChild(menyvalButton);
@@ -25,7 +26,7 @@ export function updateMenu(items) {
             dippButton.textContent = `${name} - ${price} SEK`;
 
             dippButton.addEventListener('click', () => {
-                läggTillIKundkorgen(name, price);
+                läggTillIKundkorgen(id, name, price);  
             });
 
             dippvalContainer.appendChild(dippButton);
@@ -35,13 +36,14 @@ export function updateMenu(items) {
             drinkButton.textContent = `${name} - ${price} SEK`;
 
             drinkButton.addEventListener('click', () => {
-                läggTillIKundkorgen(name, price);
+                läggTillIKundkorgen(id, name, price);  
             });
 
             drickvalContainer.appendChild(drinkButton);
         }
     });
 }
+
 
 
 

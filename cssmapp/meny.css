@@ -13,21 +13,28 @@
 }
 
 .matval {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
     background-color: var(--lightGray);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    padding: 1.5em;
+    
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1em;
 }
+
+.menyval-button {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0;
+	background-color: var(--lightGray);
+}
 .menyval {
     display: flex;
-    flex-direction: row;
-	flex-wrap: wrap;
+    flex-direction: column;
+	
     
 }
 .mellanstreck {
@@ -47,8 +54,6 @@
     margin-top: 0.5em;
 }
 
-
-
 }
 
 .icon {
@@ -57,8 +62,30 @@
     align-self: flex-end;
     padding: 0.5em;
     margin: 1em;
-    
+    position: relative;
     border-radius: 6px;
+
+	.reddott {
+		background-color: var(--mainRed);
+    color: var(--mainWhite);
+    font-size: 0.8rem;
+    border-radius: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: -0.5rem;
+    right: -0.5rem;
+	}
+
+
+}
+
+.reddott.displaynone {
+	display: none;
 }
 
 .dippval {
