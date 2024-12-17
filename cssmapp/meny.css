@@ -27,6 +27,7 @@
 .menyval {
     display: flex;
     flex-direction: row;
+	flex-wrap: wrap;
     
 }
 .mellanstreck {
@@ -75,6 +76,7 @@
     .dippcontainer {
        display: flex;
 	   flex-direction: row;
+	   flex-wrap: wrap;
         margin-bottom: 1em;
         
     }
@@ -110,6 +112,7 @@
     .drickcontainer {
         display: flex;
         flex-direction: row;
+		flex-wrap: wrap;
         margin-bottom: 1em;
         
     }
@@ -123,4 +126,26 @@
         border-radius: 6px;
     }
 
+}
+
+button {
+	border: none;
+	color: var(--mainWhite);
+	background-color: #898383;
+	padding: 0.5rem;
+	border-radius: 0.4rem;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: var(--darkGray);
+}
+
+.dippsås:hover {
+	background-color: var(--darkGray);
+}
+
+.drickor:hover {
+	background-color: var(--darkGray);
 }

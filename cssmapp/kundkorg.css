@@ -4,104 +4,111 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    justify-content: space-between;
+    padding: 1em;
 }
+
 .icon {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.minaval-container {
+    display: flex;
+    flex-direction: column; /* Lägg varje produkt vertikalt */
+    margin: 1em 0;
 }
 
 .minaval {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Matnamn, mellanstreck och matpris på samma rad */
+    justify-content: space-between; /* Placera matnamn och matpris på motsatta sidor */
     align-items: center;
-    margin-right: 2em;
-    margin-left: 2em;
-
-    .matnamn {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .matpris {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+    margin: 1em 0;
+    width: 100%;
 }
+
+.matnamn, .matpris {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .mellanstreck {
-    border-bottom: dotted var(--lightGray);
-    flex-grow: 1;
-    
+    border-bottom: 1px dotted var(--lightGray);
+    flex-grow: 1; /* Gör så att mellanstrecket fyller utrymmet mellan matnamn och matpris */
+    margin: 0 1em;
 }
+
 .plus-minus {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Placerar +, antal, - på samma rad */
+    justify-content: center;
     align-items: center;
+    margin-top: 0.5em; /* Lägger lite mellanrum under matnamn och matpris */
+    width: 100%; /* Se till att denna sektion fyller hela bredden */
+    margin-bottom: 1em; /* Avstånd mellan produkter */
 }
-.plus {
-    /* font-size: ; */
-    background-color: var(--cartGrey);
-    border-radius: 100%;
-    /* height: 1rem;
-    width: 1rem; */
-    padding: 10px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 1em;
-}
-.minus {
+
+.plus, .minus {
     background-color: var(--cartGrey);
     border-radius: 100%;
     padding: 10px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    cursor: pointer;
+    margin: 0 1em;
+}
+
+.antal {
+    font-size: 1rem;
+    margin: 0 1em;
 }
 
 .totalen {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 1em;
-    margin: 2em;
+    margin: 2em auto;
     background-color: var(--cartGrey);
     border-radius: 4px;
+    width: fit-content;
+    min-width: 100%;
+}
 
-    .total-titel{
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+.total-titel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-    .moms {
-        font-size: 0.8rem;
-    }
+.moms {
+    font-size: 0.8rem;
+}
 
-   .slutpris {
+.slutpris {
     font-size: 1.2rem;
     font-weight: bold;
-   }
-
-
-
 }
 
 .betala {
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     background-color: var(--darkGray);
     color: var(--mainWhite);
     border: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 3.2em;
-    padding-right: 3.2em;
-    margin-top: 0;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 0.5em;
+    padding: 1em;
+    margin: 0 auto 2em auto;
+    width: 100%;
+    max-width: 100%;
     border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
