@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
+	width: 100%;
 
 
 .menytitel {
@@ -19,6 +20,8 @@
     background-color: var(--lightGray);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
     
     margin-top: 1em;
     margin-left: 1em;
@@ -45,25 +48,25 @@
     flex-grow: 1;
     
 }
+}
 
-.matnamn {
-    /* align-self: flex-start; */
-}
-.matpris {
-    /* align-self: flex-end; */
-}
 .innehåll {
-    /* font-size: 0.7rem;
-    margin-top: 0.5em; */
+	margin-left: 1em;
 }
 
+.menyval-container {
+	width: 99%;
+	margin-left: 0em;
+	margin-right: 1em;
+	
 }
+
 
 .menyval-info {
     display: flex;
     align-items: center; 
-    justify-content: space-between; 
-    width: 100%; 
+    /* justify-content: space-between;  */
+    
 }
 
 .icon {

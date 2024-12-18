@@ -84,22 +84,18 @@ document.querySelector('.betala').addEventListener('click', async () => {
     try {
         const orderResponse = await placeOrder();
         console.log('Order skickad:', orderResponse);
+        
+        // updateEta tillhör biten längst ner function updateEta
+        updateEta(orderResponse);
     } catch (error) {
         console.error('Fel vid skickande av order:', error);
     }
 });
 
-
 async function placeOrder() {
-	console.log (kundkorg)
+    console.log('Kundkorg:', kundkorg);
     const orderData = {
-		// items: [1,2,4,6]
-        // items: kundkorg.map(item => ({
-        //      item:id
-            
-        // }))
-        items: kundkorg
-			.flatMap((item) => Array(item.count).fill(Number(item.id))),
+        items: kundkorg.flatMap((item) => Array(item.count).fill(Number(item.id))),
     };
 
     console.log("Order Data:", JSON.stringify(orderData)); 
@@ -109,7 +105,7 @@ async function placeOrder() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-zocom": 'yum-zaCmZA74PLKCrD8Y'
+                "x-zocom": 'yum-zaCmZA74PLKCrD8Y',
             },
             body: JSON.stringify(orderData),
         };
@@ -123,12 +119,61 @@ async function placeOrder() {
         }
 
         const data = await response.json();
+        console.log("Order Response:", data);
+
         return data;
     } catch (error) {
         console.error("Fel vid beställning:", error.message);
         throw error;
     }
 }
+
+
+function updateEta(data) {
+	const etaElement = document.querySelector(".minuter");
+	const orderIdElement = document.querySelector(".ordernr");
+
+	const orderEta = new Date(data.order.eta);
+	const currentTime = new Date();
+
+	const timeDifference = Math.max(0, orderEta - currentTime); 
+	const minutesLeft = Math.ceil(timeDifference / (1000 * 60));
+
+	const orderId = data.order.id;
+
+	orderIdElement.innerText = `#${orderId}`;
+	etaElement.innerText = `ETA ${minutesLeft} MIN`;
+}
+
+
+// function updateEta(data) {
+//     const etaElement = document.querySelector(".minuter");  
+//     const orderIdElement = document.querySelector(".ordernr");  
+
+    
+//     const orderEta = new Date(data.eta);  
+//     const orderTimestamp = new Date(data.timestamp);  
+
+//     if (isNaN(orderEta) || isNaN(orderTimestamp)) {
+//         console.error("Felaktigt datumformat för ETA eller Timestamp");
+//         return;  
+//     }
+
+    
+//     const timeDifference = Math.max(0, orderEta - orderTimestamp);
+//     const minutesLeft = Math.ceil(timeDifference / (1000 * 60));  
+
+//     const orderId = data.id;
+
+    
+//     orderIdElement.innerText = `#${orderId}`;
+//     etaElement.innerText = `ETA: ${minutesLeft} MIN`;
+// }
+
+
+
+
+
 
 
 
