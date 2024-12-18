@@ -21,11 +21,18 @@
 
 .minaval {
     display: flex;
-    flex-direction: row; /* Matnamn, mellanstreck och matpris på samma rad */
-    justify-content: space-between; /* Placera matnamn och matpris på motsatta sidor */
-    align-items: center;
+    flex-direction: column; /* Matnamn, mellanstreck, matpris och antal ska vara på olika rader */
+    align-items: stretch; /* Se till att de fyller bredden */
     margin: 1em 0;
     width: 100%;
+}
+
+/* Ändringar här för att separera matnamn, mellanstreck och matpris på samma rad */
+.mat-info-container {
+    display: flex;
+    justify-content: space-between; /* Namn och pris på var sin sida */
+    align-items: center;
+    margin-bottom: 0.5em; /* Lite mellanrum mellan matnamn och antal */
 }
 
 .matnamn, .matpris {
@@ -33,6 +40,7 @@
     font-weight: bold;
 }
 
+/* För mellanstreck som ska fylla utrymmet mellan namn och pris */
 .mellanstreck {
     border-bottom: 1px dotted var(--lightGray);
     flex-grow: 1; /* Gör så att mellanstrecket fyller utrymmet mellan matnamn och matpris */
@@ -42,7 +50,7 @@
 .plus-minus {
     display: flex;
     flex-direction: row; /* Placerar +, antal, - på samma rad */
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 0.5em; /* Lägger lite mellanrum under matnamn och matpris */
     width: 100%; /* Se till att denna sektion fyller hela bredden */
@@ -51,8 +59,14 @@
 
 .plus, .minus {
     background-color: var(--cartGrey);
+    font-size: 1rem;
     border-radius: 100%;
-    padding: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     cursor: pointer;
     margin: 0 1em;
 }
@@ -103,6 +117,7 @@
     max-width: 100%;
     border-radius: 4px;
 }
+
 
 
 

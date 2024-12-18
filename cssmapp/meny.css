@@ -3,7 +3,7 @@
     color: var(--mainWhite);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
 
 
 .menytitel {
@@ -31,6 +31,9 @@
 	border-radius: 0;
 	background-color: var(--lightGray);
 }
+.menyval-button:hover{
+	background-color: var(--darkGray);
+}
 .menyval {
     display: flex;
     flex-direction: column;
@@ -44,16 +47,23 @@
 }
 
 .matnamn {
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }
 .matpris {
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 .innehåll {
-    font-size: 0.7rem;
-    margin-top: 0.5em;
+    /* font-size: 0.7rem;
+    margin-top: 0.5em; */
 }
 
+}
+
+.menyval-info {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .icon {
@@ -163,6 +173,7 @@ button {
 	border-radius: 0.4rem;
 	font-size: 14px;
 	cursor: pointer;
+	margin: 0.4em;
 }
 
 button:hover{
