@@ -36,8 +36,8 @@ const betalaButton = document.querySelector('.betala');
 betalaButton.addEventListener('click', () => showSection('.etasida'));
 
 
-const kvittoButton = document.querySelector('.sekvittot');
-kvittoButton.addEventListener('click', () => showSection('.kvittosidan'));
+// const kvittoButton = document.querySelector('.sekvittot');
+// kvittoButton.addEventListener('click', () => showSection('.kvittosidan'));
 
 const nybestButton = document.querySelector('.etasida .nybeställning');
 nybestButton.addEventListener('click', () => showSection('.menysida'));
