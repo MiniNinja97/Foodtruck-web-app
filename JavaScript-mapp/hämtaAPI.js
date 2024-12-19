@@ -1,45 +1,4 @@
-// async function getApiKey(url){
-//     try{
-//         const response = await fetch(url, {
-//             method: 'POST',
-//             headers:{
-//                 'Content-Type': 'application/json',
-//             }
-//         });
-//         if(!response.ok){
-//             throw new Error(`HTTP error! Status: ${response.status}`)
-//         }
 
-//         const data = await response.json();
-//         console.log('API key:', data)
-//     }
-
-//     catch(error){
-//         console.error('Error fetching api key', error)
-//     }
-// }
-// getApiKey('https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/keys');
-
-// // async function fetchTenant() {
-// 	const options = {
-// 		method: 'POST',
-// 		body: JSON.stringify({ name: 'Emma Malinsdotter' }),
-// 		headers: {
-// 			"Content-Type": 'application/json',
-// 			"x-zocom": apiKey
-// 		}
-// 	}
-
-// 	const response = await fetch('https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/tenants', options);
-// 	const data = await response.json();
-// 	console.log('Tenanten: ', data);
-// }
-
-// fetchTenant();
-
-//nyckeln {key: 'yum-zaCmZA74PLKCrD8Y'}
-//URL: 'https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/'
-//Tenant: '461p'
 
 const apiUrl = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 const tenant = "461p";
@@ -216,43 +175,43 @@ async function getReceipt(data) {
 }
 export {getReceipt}
 
-// Antag att orderData är den data du får efter att ordern skickats
 
 
-// Lägg till eventlistener för "SE KVITTO"-knappen
-document.querySelector(".sekvittot").addEventListener("click", async () => {
-    if (orderData) {
-        try {
-            const receiptArray = await getReceipt({ order: { id: orderData.id } });
-            if (receiptArray && receiptArray.receipt.items) {
-                const receiptContainer = document.querySelector(".valmatkvitto");
-                receiptContainer.innerHTML = "";  // Rensa tidigare innehåll
 
-                receiptArray.receipt.items.forEach((item) => {
-                    const receiptItemName = document.createElement("p");
-                    receiptItemName.classList.add("matval");
-                    receiptItemName.innerText = item.name;
 
-                    const receiptDivider = document.createElement("div");
-                    receiptDivider.classList.add("mellanstreckkvitto");
+// document.querySelector(".sekvittot").addEventListener("click", async () => {
+//     if (orderData) {
+//         try {
+//             const receiptArray = await getReceipt({ order: { id: orderData.id } });
+//             if (receiptArray && receiptArray.receipt.items) {
+//                 const receiptContainer = document.querySelector(".valmatkvitto");
+//                 receiptContainer.innerHTML = "";  // Rensa tidigare innehåll
 
-                    const receiptItemPrice = document.createElement("p");
-                    receiptItemPrice.classList.add("matpris");
-                    receiptItemPrice.innerText = `${item.price} SEK`;
+//                 receiptArray.receipt.items.forEach((item) => {
+//                     const receiptItemName = document.createElement("p");
+//                     receiptItemName.classList.add("matval");
+//                     receiptItemName.innerText = item.name;
 
-                    receiptContainer.appendChild(receiptItemName);
-                    receiptContainer.appendChild(receiptDivider);
-                    receiptContainer.appendChild(receiptItemPrice);
-                });
+//                     const receiptDivider = document.createElement("div");
+//                     receiptDivider.classList.add("mellanstreckkvitto");
 
-                // Totalbelopp
-                const totalElement = document.querySelector(".slutpris p");
-                totalElement.innerText = `${receiptArray.receipt.total} SEK`;
-            }
-        } catch (error) {
-            console.error("Error fetching receipt:", error);
-        }
-    } else {
-        console.error("Orderdata saknas. Kan inte hämta kvitto.");
-    }
-});
+//                     const receiptItemPrice = document.createElement("p");
+//                     receiptItemPrice.classList.add("matpris");
+//                     receiptItemPrice.innerText = `${item.price} SEK`;
+
+//                     receiptContainer.appendChild(receiptItemName);
+//                     receiptContainer.appendChild(receiptDivider);
+//                     receiptContainer.appendChild(receiptItemPrice);
+//                 });
+
+//                 // Totalbelopp
+//                 const totalElement = document.querySelector(".slutpris p");
+//                 totalElement.innerText = `${receiptArray.receipt.total} SEK`;
+//             }
+//         } catch (error) {
+//             console.error("Error fetching receipt:", error);
+//         }
+//     } else {
+//         console.error("Orderdata saknas. Kan inte hämta kvitto.");
+//     }
+// });

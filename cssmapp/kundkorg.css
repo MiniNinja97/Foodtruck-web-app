@@ -15,24 +15,24 @@
 
 .minaval-container {
     display: flex;
-    flex-direction: column; /* Lägg varje produkt vertikalt */
+    flex-direction: column; 
     margin: 1em 0;
 }
 
 .minaval {
     display: flex;
-    flex-direction: column; /* Matnamn, mellanstreck, matpris och antal ska vara på olika rader */
-    align-items: stretch; /* Se till att de fyller bredden */
+    flex-direction: column; 
+    align-items: stretch; 
     margin: 1em 0;
     width: 100%;
 }
 
-/* Ändringar här för att separera matnamn, mellanstreck och matpris på samma rad */
+
 .mat-info-container {
     display: flex;
-    justify-content: space-between; /* Namn och pris på var sin sida */
+    justify-content: space-between; 
     align-items: center;
-    margin-bottom: 0.5em; /* Lite mellanrum mellan matnamn och antal */
+    margin-bottom: 0.5em; 
 }
 
 .matnamn, .matpris {
@@ -40,21 +40,21 @@
     font-weight: bold;
 }
 
-/* För mellanstreck som ska fylla utrymmet mellan namn och pris */
+
 .mellanstreck {
     border-bottom: 1px dotted var(--lightGray);
-    flex-grow: 1; /* Gör så att mellanstrecket fyller utrymmet mellan matnamn och matpris */
+    flex-grow: 1; 
     margin: 0 1em;
 }
 
 .plus-minus {
     display: flex;
-    flex-direction: row; /* Placerar +, antal, - på samma rad */
+    flex-direction: row; 
     justify-content: flex-start;
     align-items: center;
-    margin-top: 0.5em; /* Lägger lite mellanrum under matnamn och matpris */
-    width: 100%; /* Se till att denna sektion fyller hela bredden */
-    margin-bottom: 1em; /* Avstånd mellan produkter */
+    margin-top: 0.5em; 
+    width: 100%; 
+    margin-bottom: 1em; 
 }
 
 .plus, .minus {

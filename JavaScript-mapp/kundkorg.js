@@ -19,7 +19,7 @@ function uppdateraKundkorg() {
         const produktDiv = document.createElement('div');
         produktDiv.classList.add('minaval');
 
-        // Skapa en container för matnamn, mellanstreck och matpris
+        
         const matInfoContainer = document.createElement('div');
         matInfoContainer.classList.add('mat-info-container');
         
@@ -38,7 +38,7 @@ function uppdateraKundkorg() {
         matInfoContainer.appendChild(mellanstreck);
         matInfoContainer.appendChild(matpris);
 
-        // Skapa plus, antal och minus i en egen container
+        
         const plusMinusContainer = document.createElement('div');
         plusMinusContainer.classList.add('plus-minus');
 
@@ -72,8 +72,8 @@ function uppdateraKundkorg() {
             uppdateraKundkorg(); 
         });
 
-        produktDiv.appendChild(matInfoContainer);  // Lägg till matnamn, mellanstreck och matpris
-        produktDiv.appendChild(plusMinusContainer);  // Lägg till plus, antal och minus
+        produktDiv.appendChild(matInfoContainer);  
+        produktDiv.appendChild(plusMinusContainer);  
 
         kundkorgContainer.appendChild(produktDiv);
 
@@ -103,30 +103,30 @@ function läggTillIKundkorgen(id, name, price) {
     uppdateraKundkorg();
 }
 
-export { kundkorg, läggTillIKundkorgen };
 
 
+// resetar när man klickar på att göra en ny beställning
 document.querySelector('.nybeställning').addEventListener('click', function() {
-    // Återställ kundkorgen i localStorage
-    localStorage.removeItem('cartItems');  // Töm kundkorgsdata från localStorage
+    
+    localStorage.removeItem('cartItems'); 
 
-    // Återställ kundkorgs-arrayen
-    kundkorg = [];  // Töm den lokala kundkorgen
+    
+    kundkorg = [];  
 
-    // Uppdatera kundkorgsgränssnittet
-    uppdateraKundkorg();  // Anropa funktionen för att tömma gränssnittet
+    
+    uppdateraKundkorg();  
 
-    // Dölj reddott eftersom kundkorgen är tom
+    
     const reddott = document.querySelector('.reddott');
     if (reddott) {
-        reddott.style.display = 'none';  // Dölj reddott
+        reddott.style.display = 'none';  
     }
 
-    // Här finns redan din kod som tar dig tillbaka till menysidan
+    
 });
 
 
 
-
+export { kundkorg, läggTillIKundkorgen };
 
 
