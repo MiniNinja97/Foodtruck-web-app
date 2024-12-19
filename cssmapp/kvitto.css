@@ -1,106 +1,106 @@
 .kvittosidan {
-	background-color: var(--lightGray);
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: end;
-	
-	
+    background-color: var(--lightGray);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .kvitto {
-	background-color: var(--mainWhite);
-	color: var(--lightGray);
-	margin-left: 2em;
-	margin-right: 2em;
-	
-	
-	
-	
+    background-color: var(--mainWhite);
+    color: var(--lightGray);
+    margin-left: 2em;
+    margin-right: 2em;
 }
+
 .kvittocontainer {
-	background-color: var(--mainWhite);
-	color: var(--lightGray);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1em;
-	
-	
-
-	.kvittologgan {
-		width: 5em;
-		height: 5em;
-	
-		margin: 2rem;
-	}
-
-
-
-
+    background-color: var(--mainWhite);
+    color: var(--lightGray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
 }
+
+.kvittologgan {
+    width: 5em;
+    height: 5em;
+    margin: 2rem;
+}
+
 h2 {
-	font-size: 1.5em;
-	font-weight: bold;
-	margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
 
+p {
+    margin-bottom: 1em;
+    font-weight: bold;
 }
-p{
-	margin-bottom: 1em;
-	font-weight: bold;
-}
+
 .valmatkvitto {
-	display: flex;
+    display: flex;
     flex-direction: row;
-	align-items: center;
-	padding: 1em;
-	
+    align-items: center;
+    padding: 1em;
 }
+
 .mellanstreckkvitto {
     border-bottom: dotted var(--lightGray);
     flex-grow: 1;
-    
 }
 
 .totalenkvitto {
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 1em;
     margin: 2em;
     background-color: var(--cartGrey);
-    
+}
 
-    .total-titel{
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+.total-titel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-    .moms {
-        font-size: 0.8rem;
-    }
+.moms {
+    font-size: 0.8rem;
+}
 
-   .slutpris {
+.slutpris {
     font-size: 1.2rem;
     font-weight: bold;
-   }
-
-
-
 }
+
 .nybeställning {
-	background-color: var(--darkGray);
-	color: var(--mainWhite);
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-right: 1em;
-	margin-left: 1em;
-	font-size: 1.5rem;
-	font-weight: bold;
-	border: 0;
-	border-radius: 4px;
+    background-color: var(--darkGray);
+    color: var(--mainWhite);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+}
+.matvalkvitto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lightGray);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+    
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }

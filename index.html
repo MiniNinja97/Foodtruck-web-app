@@ -15,6 +15,7 @@
 	<script type="module" src="./JavaScript-mapp/hämtaAPI.js"></script>
 	<script type="module" src="./JavaScript-mapp/hämtamenyn.js"></script>
 	<script type="module" src="./JavaScript-mapp/kundkorg.js"></script>
+	<script type="module" src="./JavaScript-mapp/kvitto.js"></script>
 	
 <title>Foodtruck</title>
 </head>
@@ -110,19 +111,21 @@
 		<button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
 	</section>
 	
-	<section class="kvittosidan ">
+	<section class="kvittosidan">
 		<div class="kvitto">
 			<div class="kvittocontainer">
 				<img class="kvittologgan" src="img/logo.svg" alt="loggan för foodtruck">
 				<h2>KVITTO</h2>
-				<p>#4kjwsdf2</p>
+				<p class="order-number">#4kjwsdf2</p> <!-- Ordernummer kommer att skrivas här -->
 			</div>
 			<div class="valmatkvitto">
-				<p>Karlstad</p>
+				<div class="valmatkvittoinre">
+				<!-- <p class="matvalkvitto"></p> 
 				<div class="mellanstreckkvitto"></div>
-				<p>27 sek</p>
+				<p class="matpriskvitto"></p>  -->
 			</div>
-			<p class="mängd"></p>
+			</div>
+			
 			<div class="totalenkvitto">
 				<div class="text">
 					<p class="total-titel">Totalt</p>
@@ -130,12 +133,14 @@
 				</div>
 				<div class="mellanrum"></div>
 				<div class="slutpris">
-					<p>120SEK</p>
+					<p></p> <!-- Totalbeloppet kommer att skrivas här -->
 				</div>
 			</div>
 		</div>
 		<button class="nybeställning">GÖR EN NY BESTÄLLNING</button>
 	</section>
+	
+
 	
 
 

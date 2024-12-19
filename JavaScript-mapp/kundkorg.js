@@ -106,7 +106,24 @@ function läggTillIKundkorgen(id, name, price) {
 export { kundkorg, läggTillIKundkorgen };
 
 
+document.querySelector('.nybeställning').addEventListener('click', function() {
+    // Återställ kundkorgen i localStorage
+    localStorage.removeItem('cartItems');  // Töm kundkorgsdata från localStorage
 
+    // Återställ kundkorgs-arrayen
+    kundkorg = [];  // Töm den lokala kundkorgen
+
+    // Uppdatera kundkorgsgränssnittet
+    uppdateraKundkorg();  // Anropa funktionen för att tömma gränssnittet
+
+    // Dölj reddott eftersom kundkorgen är tom
+    const reddott = document.querySelector('.reddott');
+    if (reddott) {
+        reddott.style.display = 'none';  // Dölj reddott
+    }
+
+    // Här finns redan din kod som tar dig tillbaka till menysidan
+});
 
 
 
